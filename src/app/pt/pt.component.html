@@ -10,10 +10,10 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="javascript:void(0)" (click)="setDoctor()" >SetDoctor</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="javascript:void(0)" (click)="showDoctor()" >ShowDoctor-</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -91,6 +91,6 @@ currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
     </div>
   </div>
 </div>
-
+<app-txcode></app-txcode>
 
   <router-outlet></router-outlet>

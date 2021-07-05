@@ -1,1 +1,5 @@
 <p>txcode works!</p>
+<tabset>
+    <tab  *ngFor="let g of gtx; index as i;" heading="{{g.gwork}}" id="t_{{g.gcode}}">{{g.gwork}}</tab>
+    
+  </tabset>

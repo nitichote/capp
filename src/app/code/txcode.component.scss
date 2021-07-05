@@ -1,0 +1,29 @@
+.modal-heading{
+    background-color: #038F43;
+    height: 30px;
+    color: #fff;
+    margin: 5px 0px 10px 0px;
+    }
+    .nav-tabs .nav-link{
+    background-color: #d1dbf8;
+    border: 1px solid #0d1323;
+    color: rgb(10, 10, 10);
+    font-size: 12px;
+    margin-right: 5px;
+    margin-top:5px;
+    border-bottom: #fff;
+    
+    }
+    .nav-tabs .nav-link:hover{
+    background-color: gray;
+    }
+    
+    .nav-tabs .nav-link.active{
+    background-color: #7296da !important;
+    color: #fff !important;
+    font-size: 12px;
+    }
+    .nav-tabs .nav-link.active:hover{
+    background-color: gray;
+    }
+    

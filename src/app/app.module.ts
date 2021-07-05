@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {InputTextModule} from 'primeng/inputtext';
 import {RippleModule} from 'primeng/ripple';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DataService } from './service/data.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     InputTextModule,
     RippleModule, BrowserAnimationsModule, NgbModule
   ],
- 
+ providers:[DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
