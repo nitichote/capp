@@ -11,9 +11,12 @@ import {RippleModule} from 'primeng/ripple';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from './service/data.service';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
+   
    
   ],
   imports: 

@@ -13,6 +13,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { defineLocale } from 'ngx-bootstrap/chronos';
 import { thLocale } from 'ngx-bootstrap/locale';
+
 defineLocale('th', thLocale);
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({

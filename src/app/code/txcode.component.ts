@@ -20,17 +20,12 @@ txcodes =[];
   const g = this.txcodes.map((x) => {
     return {gcode:x['gcode'],gwork:x['gwork']};
   });
- // let gtx1 = Array.from(new Set(g));
-  //console.log("g = ",gtx1);
-  //this.gtx = gtx1.map((x)=>{
-//return gtx1.find(a=>a.gcode ==x.gcode)
-//  });
+
 this.gtx =g.filter((v,i,a)=>a.findIndex(t=>(t.gcode === v.gcode && t.gwork===v.gwork))===i);
-//this.gtx =g.filter((v,i,a)=>a.findIndex(t=>(t.gcode === v.gcode && t.gwork===v.gwork))===i);
-  //this.gtx.map()
- //   console.log( [...new Set(this.txcodes.map((x) =>{   return{gcode:x['gcode'],gwork:x['gwork']};}))]);
-  // 
- // console.log("gtx = ",this.gtx);
+});
+ this.ps.getTable('ctxsubgroup').then((x:any)=>{
+this.stx  = x["message"];
+
 });
   }
 

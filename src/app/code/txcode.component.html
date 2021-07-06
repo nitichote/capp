@@ -1,5 +1,10 @@
 <p>txcode works!</p>
 <tabset>
-    <tab  *ngFor="let g of gtx; index as i;" heading="{{g.gwork}}" id="t_{{g.gcode}}">{{g.gwork}}</tab>
+    <tab  *ngFor="let g of gtx; index as i;" heading="{{g.gwork}}" id="t_{{g.gcode}}">{{g.gwork}}
+
+<button class="btn btn-primary" *ngFor="let s of (stx | txgroupPipe:g.gcode)">
+  {{s.scode}}:{{s.swork}}
+  </button>
+    </tab>
     
   </tabset>

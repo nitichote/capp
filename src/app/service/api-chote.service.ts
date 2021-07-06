@@ -61,6 +61,13 @@ export class ApiChoteService {
 
    return await this.http.get(api2020).toPromise();
   }
+  async getTable(tbl:string) {
+    //const url =
+   //   "https://dmfzero.com/apileaf/apis.php/dentalkpi/dentreporttemplate/hdc";
+   let api2020 =  this.api+ "able/"+tbl;
+
+   return await this.http.get(api2020).toPromise();
+  }
   async getpt(hn:string) {
     //const url =
    //   "https://dmfzero.com/apileaf/apis.php/dentalkpi/dentreporttemplate/hdc";
