@@ -7,16 +7,9 @@ import { TxcodeComponent } from './txcode.component';
 
 import { TxgroupPipePipe } from '../pipe/txgroup-pipe.pipe';
 
-
-
-
 @NgModule({
-  declarations: [TxgroupPipePipe,
-    TxcodeComponent],
-  imports: [
-    CommonModule,ShareModule,
-    CodeRoutingModule
-  ],
-  exports:[]
+  declarations: [TxgroupPipePipe, TxcodeComponent],
+  imports: [CommonModule, ShareModule, CodeRoutingModule],
+  exports: [TxcodeComponent],
 })
-export class CodeModule { }
+export class CodeModule {}

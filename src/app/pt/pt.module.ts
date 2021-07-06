@@ -10,22 +10,20 @@ import { PtViewComponent } from './pt-view.component';
 import { PtEditComponent } from './pt-edit.component';
 import { PtAddComponent } from './pt-add.component';
 import { ShareModule } from '../share/share/share.module';
-import { TxcodeComponent } from '../code/txcode.component';
+import { CodeModule } from '../code/code.module';
+// import { TxcodeComponent } from '../code/txcode.component';
 
 @NgModule({
   declarations: [
-    PtComponent,TxcodeComponent,
+    PtComponent,
+    // TxcodeComponent,
     PtvisitComponent,
     PttreatComponent,
     PtdxComponent,
     PtViewComponent,
     PtEditComponent,
-    PtAddComponent
-  
+    PtAddComponent,
   ],
-  imports: [ShareModule,
-    CommonModule,
-    PtRoutingModule
-  ]
+  imports: [ShareModule, CommonModule, PtRoutingModule, CodeModule],
 })
-export class PtModule { }
+export class PtModule {}
