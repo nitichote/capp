@@ -64,7 +64,8 @@ export class ApiChoteService {
   async getTable(tbl:string) {
     //const url =
    //   "https://dmfzero.com/apileaf/apis.php/dentalkpi/dentreporttemplate/hdc";
-   let api2020 =  this.api+ "able/"+tbl;
+   let api2020 =  this.api+ "table/"+tbl;
+console.log(api2020);
 
    return await this.http.get(api2020).toPromise();
   }

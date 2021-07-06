@@ -12,10 +12,16 @@ export class TxcodeComponent implements OnInit {
   gtx: any = [];
   stx = [];
   txcodes = [];
+  txcodeFilter=[];
+  scode="";
+  showTxcode(scode:string){
+this.scode = scode;
+  //  this.txcodeFilter = this.txcodes.filter((x:any)=>{x.workcode == scode});
+  }
   ngOnInit(): void {
     this.ps.getRout('txcodes').then((x: any) => {
       this.txcodes = x['message'];
-      //console.log(this.txcodes);
+      console.log(this.txcodes);
       const g = this.txcodes.map((x) => {
         return { gcode: x['gcode'], gwork: x['gwork'] };
       });

@@ -1,13 +1,32 @@
-<p>txcode works!</p>
 <tabset>
-  <tab
-    *ngFor="let g of gtx; index as i"
-    heading="{{ g.gwork }}"
-    id="t_{{ g.gcode }}"
-    >{{ g.gwork }}
-  </tab>
+    <tab *ngFor="let g of gtx; index as i" heading="{{ g.gwork }}" id="t_{{ g.gcode }}">
+        <button (click)="showTxcode(s.scode)" class="btn btn-primary m-2" *ngFor="let s of stx | txgroupPipe: g.gcode">
+     {{ s.swork }}
+    </button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ลำดับ</th>
+                    <th>รหัส</th>
+                    <th>ชื่อรายการ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of txcodes | txcode:scode ; let i=index">
+                    <td scope="row">{{i}}</td>
+                    <td>{{t.workcode}}</td>
+                    <td>{{t.work}}</td>
+                </tr>
+                <tr>
 
-  <button class="btn btn-primary" *ngFor="let s of gtx | txgroupPipe: 'gcode'">
-    {{ s.scode }}:{{ s.swork }}
-  </button>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+    </tab>
+
+
 </tabset>

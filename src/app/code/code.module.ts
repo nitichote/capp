@@ -5,10 +5,10 @@ import { ShareModule } from '../share/share/share.module';
 import { CodeRoutingModule } from './code-routing.module';
 import { TxcodeComponent } from './txcode.component';
 
-import { TxgroupPipePipe } from '../pipe/txgroup-pipe.pipe';
+import { TxgroupPipePipe,TxcodePipe } from '../pipe/txgroup-pipe.pipe';
 
 @NgModule({
-  declarations: [TxgroupPipePipe, TxcodeComponent],
+  declarations: [TxgroupPipePipe, TxcodeComponent,TxcodePipe],
   imports: [CommonModule, ShareModule, CodeRoutingModule],
   exports: [TxcodeComponent],
 })
