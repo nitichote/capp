@@ -36,8 +36,7 @@
 </div>
 <p-messages [(value)]="msgs1" [enableService]="true"></p-messages>
 จัดการหลายแถว <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown><button type="button" class="btn btn-primary" (click)="showCar()" >ตกลง</button>
-<button type="button" pButton  icon="pi pi-bars" label="Show" (click)="menu.toggle($event)"></button>
-<p-menu #menu [popup]="true" [model]="items"></p-menu>
+
 <hr>
 
 <div class="container">
@@ -60,7 +59,8 @@ currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
   <ng-template pTemplate="header"   >
       <tr>
         <th style="width: 2.25em">  <p-tableHeaderCheckbox></p-tableHeaderCheckbox></th>
-          <th>Code</th>
+        <th><button type="button" class="btn btn-warning">---</button></th> 
+        <th>Code</th>
           <th>คำนำหน้า</th>
           <th>Name</th>
           <th  *ngIf="! isrpanel">วันเกิด</th>
@@ -72,6 +72,11 @@ currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
         <td>
           <p-tableCheckbox [value]="p"></p-tableCheckbox>
       </td>
+      <td>
+     
+        <p-button label="" icon="pi pi-bars" (click)="menu.toggle($event);onClickMenu(p);"  [id]="p.ptcode"></p-button>
+<p-menu #menu [popup]="true" [model]="items" [appendTo]="p.ptcode"></p-menu>
+      </td> 
           <td>{{p.ptcode}}</td>
           <td>{{p.title}}</td>
           <td>{{p.flname}}</td>

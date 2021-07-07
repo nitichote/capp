@@ -59,6 +59,12 @@ showCar(){
   
 } 
 items!: MenuItem[];
+currentRowData!:any;
+public onClickMenu(rowData: any) { 
+  this.currentRowData = rowData; 
+  console.log(rowData);
+  
+}
 update(){}
 delete(){}
 addPt(){
@@ -80,16 +86,32 @@ ngOnDestroy() {
   ];
  
   this.items = [{
-    label: 'Options',
-    items: [{
-        label: 'Update',
+    label: 'ดำเนินการ',
+    items: [
+      {
+        label: 'เพิ่มการรักษา',
+        icon: 'pi pi-refresh',
+        command: (e:Event) => {
+          console.log(e);
+          
+            this.update();
+        }
+    },
+      {
+        label: 'ดูรายละเอียด',
+        icon: 'pi pi-refresh',
+        command: () => {
+            this.update();
+        }
+    },{
+        label: 'แก้ไข',
         icon: 'pi pi-refresh',
         command: () => {
             this.update();
         }
     },
     {
-        label: 'Delete',
+        label: 'ลบ',
         icon: 'pi pi-times',
         command: () => {
             this.delete();
@@ -97,14 +119,14 @@ ngOnDestroy() {
     }
     ]},
     {
-        label: 'Navigate',
+        label: 'ดูประวัติ',
         items: [{
-            label: 'Angular Website',
+            label: 'ทั้งหมด',
             icon: 'pi pi-external-link',
             url: 'http://angular.io'
         },
         {
-            label: 'Router',
+            label: 'เฉพาะครั้งนี้',
             icon: 'pi pi-upload'
         }
     ]}
