@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PtRoutingModule } from './pt-routing.module';
+ 
+ 
 import { PtComponent } from './pt.component';
 import { PtvisitComponent } from './ptvisit.component';
 import { PttreatComponent } from './pttreat.component';
@@ -11,6 +13,8 @@ import { PtEditComponent } from './pt-edit.component';
 import { PtAddComponent } from './pt-add.component';
 import { ShareModule } from '../share/share/share.module';
 import { CodeModule } from '../code/code.module';
+
+// import { Routes, RouterModule } from '@angular/router'; 
 // import { TxcodeComponent } from '../code/txcode.component';
 
 @NgModule({
@@ -23,7 +27,10 @@ import { CodeModule } from '../code/code.module';
     PtViewComponent,
     PtEditComponent,
     PtAddComponent,
+  
   ],
-  imports: [ShareModule, CommonModule, PtRoutingModule, CodeModule],
+  imports: [ShareModule, CommonModule, PtRoutingModule, CodeModule,
+    // RouterModule
+  ],
 })
 export class PtModule {}

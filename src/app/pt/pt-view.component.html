@@ -1,1 +1,77 @@
 <p>pt-view works!</p>
+
+<!-- <div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="col-md-6">
+            <div class="form">
+
+                <i class="fa fa-search"></i>
+                <input type="text" class="form-control form-input" [(ngModel)]="txtSearch" placeholder="Search anything...">
+                <span class="left-panv xx"><i class="fa fa-microphone"></i></span><span class="left-pan"><button><i class="fa fa-home" (click)="doSearch()"></i></button></span> </div>
+        </div>
+    </div>
+</div>
+<p-messages [(value)]="msgs1" [enableService]="true"></p-messages>
+จัดการหลายแถว
+<p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown><button type="button" class="btn btn-primary" (click)="showCar()">ตกลง</button>
+
+<hr>
+
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button pButton type="button" icon="pi pi-plus" iconPos="left" (click)="addPt()" label="เพิ่มข้อมูล"></button>
+                    </div>
+                </nav>
+
+
+                <hr>
+
+                <p-table [value]="pts" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [(selection)]="selectedCars" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th style="width: 2.25em">
+                                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                            </th>
+                            <th><button type="button" class="btn btn-warning">---</button></th>
+                            <th>Code</th>
+                            <th>คำนำหน้า</th>
+                            <th>Name</th>
+                            <th *ngIf="! isrpanel">วันเกิด</th>
+
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-p let-rowIndex="rowIndex">
+                        <tr>
+                            <td>
+                                <p-tableCheckbox [value]="p"></p-tableCheckbox>
+                            </td>
+                            <td>
+
+                                <p-button label="" icon="pi pi-bars" (click)="menu.toggle($event);onClickMenu(p);" [id]="p.ptcode"></p-button>
+                                <p-menu #menu [popup]="true" [model]="items" [appendTo]="p.ptcode"></p-menu>
+                            </td>
+                            <td>{{p.ptcode}}</td>
+                            <td>{{p.title}}</td>
+                            <td>{{p.flname}}</td>
+                            <td *ngIf="! isrpanel">{{p.dob}}</td>
+
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+            <div class="col-md-auto">
+                <div *ngIf="isrpanel" class="fixbox">
+
+                    <app-pt-add></app-pt-add>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
