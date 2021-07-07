@@ -4,6 +4,7 @@ import { PtAddComponent } from './pt-add.component';
 import { PtEditComponent } from './pt-edit.component';
 import { PtViewComponent } from './pt-view.component';
 import { PtComponent } from './pt.component';
+import { PtvisitComponent } from './ptvisit.component';
 
 const routes: Routes = [ {
   path: '',
@@ -17,6 +18,9 @@ component: PtEditComponent
 },
 { path: 'add',
 component: PtAddComponent
+},
+{ path: 'ptvisit/:ptcode',
+component: PtvisitComponent
 },
 ];
 
